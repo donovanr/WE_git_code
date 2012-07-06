@@ -1,0 +1,195 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		6B423FED15A77B1400142DC3 /* Assign.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Assign.c; path = ../src/Assign.c; sourceTree = "<group>"; };
+		6B423FEE15A77B1400142DC3 /* BF_Sim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BF_Sim.c; path = ../src/BF_Sim.c; sourceTree = "<group>"; };
+		6B423FEF15A77B1400142DC3 /* Cal_Dist_Coord.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Cal_Dist_Coord.c; path = ../src/Cal_Dist_Coord.c; sourceTree = "<group>"; };
+		6B423FF015A77B1400142DC3 /* Check_State_A.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Check_State_A.c; path = ../src/Check_State_A.c; sourceTree = "<group>"; };
+		6B423FF115A77B1400142DC3 /* Check_State_B.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Check_State_B.c; path = ../src/Check_State_B.c; sourceTree = "<group>"; };
+		6B423FF215A77B1400142DC3 /* COMB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = COMB.c; path = ../src/COMB.c; sourceTree = "<group>"; };
+		6B423FF315A77B1400142DC3 /* const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = const.h; path = ../src/const.h; sourceTree = "<group>"; };
+		6B423FF415A77B1400142DC3 /* dist-coord.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "dist-coord.c"; path = "../src/dist-coord.c"; sourceTree = "<group>"; };
+		6B423FF515A77B1400142DC3 /* extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extern.h; path = ../src/extern.h; sourceTree = "<group>"; };
+		6B423FF615A77B1400142DC3 /* Initial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Initial.c; path = ../src/Initial.c; sourceTree = "<group>"; };
+		6B423FF715A77B1400142DC3 /* Make_Ghost.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Make_Ghost.c; path = ../src/Make_Ghost.c; sourceTree = "<group>"; };
+		6B423FF815A77B1400142DC3 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = ../src/makefile; sourceTree = "<group>"; };
+		6B423FF915A77B1400142DC3 /* Max.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Max.c; path = ../src/Max.c; sourceTree = "<group>"; };
+		6B423FFA15A77B1400142DC3 /* Min1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Min1.c; path = ../src/Min1.c; sourceTree = "<group>"; };
+		6B423FFB15A77B1400142DC3 /* Min2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Min2.c; path = ../src/Min2.c; sourceTree = "<group>"; };
+		6B423FFC15A77B1400142DC3 /* Print_Info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Print_Info.c; path = ../src/Print_Info.c; sourceTree = "<group>"; };
+		6B423FFD15A77B1400142DC3 /* Put_Ini_Stru.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Put_Ini_Stru.c; path = ../src/Put_Ini_Stru.c; sourceTree = "<group>"; };
+		6B423FFE15A77B1400142DC3 /* Reassign_Weight.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Reassign_Weight.c; path = ../src/Reassign_Weight.c; sourceTree = "<group>"; };
+		6B423FFF15A77B1400142DC3 /* scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scanner.c; path = ../src/scanner.c; sourceTree = "<group>"; };
+		6B42400015A77B1400142DC3 /* SPLIT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SPLIT.c; path = ../src/SPLIT.c; sourceTree = "<group>"; };
+		6B42400115A77B1400142DC3 /* Switch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Switch.c; path = ../src/Switch.c; sourceTree = "<group>"; };
+		6B42400215A77B1400142DC3 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = ../src/types.h; sourceTree = "<group>"; };
+		6B42400315A77B1400142DC3 /* WE_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WE_main.c; path = ../src/WE_main.c; sourceTree = "<group>"; };
+		6B42400415A77B1400142DC3 /* WE_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WE_main.h; path = ../src/WE_main.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		6B423FE015A77AF300142DC3 = {
+			isa = PBXGroup;
+			children = (
+				6B423FED15A77B1400142DC3 /* Assign.c */,
+				6B423FEE15A77B1400142DC3 /* BF_Sim.c */,
+				6B423FEF15A77B1400142DC3 /* Cal_Dist_Coord.c */,
+				6B423FF015A77B1400142DC3 /* Check_State_A.c */,
+				6B423FF115A77B1400142DC3 /* Check_State_B.c */,
+				6B423FF215A77B1400142DC3 /* COMB.c */,
+				6B423FF315A77B1400142DC3 /* const.h */,
+				6B423FF415A77B1400142DC3 /* dist-coord.c */,
+				6B423FF515A77B1400142DC3 /* extern.h */,
+				6B423FF615A77B1400142DC3 /* Initial.c */,
+				6B423FF715A77B1400142DC3 /* Make_Ghost.c */,
+				6B423FF815A77B1400142DC3 /* makefile */,
+				6B423FF915A77B1400142DC3 /* Max.c */,
+				6B423FFA15A77B1400142DC3 /* Min1.c */,
+				6B423FFB15A77B1400142DC3 /* Min2.c */,
+				6B423FFC15A77B1400142DC3 /* Print_Info.c */,
+				6B423FFD15A77B1400142DC3 /* Put_Ini_Stru.c */,
+				6B423FFE15A77B1400142DC3 /* Reassign_Weight.c */,
+				6B423FFF15A77B1400142DC3 /* scanner.c */,
+				6B42400015A77B1400142DC3 /* SPLIT.c */,
+				6B42400115A77B1400142DC3 /* Switch.c */,
+				6B42400215A77B1400142DC3 /* types.h */,
+				6B42400315A77B1400142DC3 /* WE_main.c */,
+				6B42400415A77B1400142DC3 /* WE_main.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		6B423FE715A77AF300142DC3 /* WE_C_code */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 6B423FEA15A77AF300142DC3 /* Build configuration list for PBXLegacyTarget "WE_C_code" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/donovanr/Dropbox/CPCB_Classes/cell_and_systems/cell_and_systems_project/WE_git_code/src;
+			dependencies = (
+			);
+			name = WE_C_code;
+			passBuildSettingsInEnvironment = 1;
+			productName = WE_C_code;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		6B423FE215A77AF300142DC3 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6B423FE515A77AF300142DC3 /* Build configuration list for PBXProject "WE_C_code" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B423FE015A77AF300142DC3;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B423FE715A77AF300142DC3 /* WE_C_code */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		6B423FE815A77AF300142DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6B423FE915A77AF300142DC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6B423FEB15A77AF300142DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6B423FEC15A77AF300142DC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B423FE515A77AF300142DC3 /* Build configuration list for PBXProject "WE_C_code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B423FE815A77AF300142DC3 /* Debug */,
+				6B423FE915A77AF300142DC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B423FEA15A77AF300142DC3 /* Build configuration list for PBXLegacyTarget "WE_C_code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B423FEB15A77AF300142DC3 /* Debug */,
+				6B423FEC15A77AF300142DC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B423FE215A77AF300142DC3 /* Project object */;
+}
