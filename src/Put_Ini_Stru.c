@@ -13,7 +13,7 @@
 void Put_Ini_Stru() {
   int i,j,k;
   FILE *fp;
-  char filename[256],buffer[256];
+  char filename[256],buffer[256],c;
   double tmpcoord, tmpdistA, tmpdistB;
   //kuwahara in_state;
   int *in_state;
@@ -22,18 +22,26 @@ void Put_Ini_Stru() {
   
   
   // gdat stuff
-  chdir("DATA/");
-	sprintf(buffer,"cat ../BNGSim/initial-gdat | awk 'NR==2 {print $2}' > outputG");
-	system(buffer);
-	system("wait");
+  //chdir("DATA/");
+  //sprintf(buffer,"cat ../BNGSim/initial-gdat | awk 'NR==2 {print $2}' > outputG");
+  //system(buffer);
+  //system("wait");
 	
-	fp=fopen("outputG","r");
-  fscanf(fp,"%lf",&tmpcoord);
+  //fp=fopen("outputG","r");
+  //fscanf(fp,"%lf",&tmpcoord);
+  //fclose(fp)
+  fp=fopen("BNGSim/initial-gdat","r");
+  while((c=fgetc(fp)) != '\n') {} //skip line (header)
+  for(k=0; k < coord_ind; k++){
+    fscanf(fp, "%*e");
+  }
+  fscanf(fp, "%lf",&tmpcoord); //only read the value at coord_ind
   fclose(fp);
+  //system("rm outputG");
+  //chdir("../");
 
-  system("rm outputG");
-  chdir("../");
-	// ffuts tadg
+  
+  // ffuts tadg
 	
 
   nspecies = 0;
@@ -91,15 +99,16 @@ void Put_Ini_Stru() {
     assert(par[i][j].numb<=nallpar);
     memcpy(rx_states[par[i][j].numb-1], in_state, nspecies*sizeof(int));
     
-    // gdat stuff    
-    sprintf(filename,"gdat-%d",par[i][j].numb);
-    sprintf(buffer,"cp BNGSim/initial-gdat DATA/%s",filename);
-    system(buffer);
+    // gdat stuff are these files ever used?? everything should already
+    // be stored in the par.coord
+    //sprintf(filename,"gdat-%d",par[i][j].numb);
+    //sprintf(buffer,"cp BNGSim/initial-gdat DATA/%s",filename);
+    //system(buffer);
    
-  	sprintf(filename,"Trajectory-%d",par[i][j].numb);
-    sprintf(buffer,"cp BNGSim/initial-gdat DATA/%s",filename);
-    system(buffer);
-		// ffuts tadg
+    //sprintf(filename,"Trajectory-%d",par[i][j].numb);
+    //sprintf(buffer,"cp BNGSim/initial-gdat DATA/%s",filename);
+    //system(buffer);
+    // ffuts tadg
 
   }
 

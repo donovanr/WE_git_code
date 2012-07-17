@@ -11,10 +11,10 @@
 
 void BF_Sim() {
   int i,j,k;
-  char filename[256],buffer[256];
+  char filename[256],buffer[256],c;
   FILE* fp;
   int* cur_state;
-  double flin;
+  double flin,tmpcoord;
 
   chdir("BNGSim/");
   sprintf(buffer, ". setparameters.sh %s.bngl", bngl_name);
@@ -34,29 +34,41 @@ void BF_Sim() {
         fprintf(fp,"end species\n");
         fclose(fp);
 
-				// gdat stuff
+	// gdat stuff
         system("cat parameters spec_State reactions groups > my_State");
         // ffuts tadg
 
         sprintf(buffer, "./restart.sh");	
         system(buffer);
-				sprintf(buffer, "sed -n '/begin species/,/end species/w newspecies' %s_end.net", bngl_name);
+        sprintf(buffer, "sed -n '/begin species/,/end species/w newspecies' %s_end.net", bngl_name);
         system(buffer);
 
         fp=fopen("newspecies", "r");
-				fscanf(fp,"%*s %*s");
+       	fscanf(fp,"%*s %*s");
         for(k = 0; k < nspecies; k++){
-       	fscanf(fp, "%*d %*s %lf",&flin);
-        cur_state[k] = (int)flin;
-				}
-				fclose(fp);
-				
-				// gdat stuff
-				sprintf(filename,"gdat-%d",par[i][j].numb);
-				sprintf(buffer,"mv %s.gdat ../DATA/%s",bngl_name,filename); 
-				system(buffer);
-				// ffuts tadg
+	  fscanf(fp, "%*d %*s %lf",&flin);
+	  cur_state[k] = (int)flin;
+	}
+	fclose(fp);
+	
+	// gdat stuff
+	//sprintf(filename,"gdat-%d",par[i][j].numb);
+	//sprintf(buffer,"mv %s.gdat ../DATA/%s",bngl_name,filename); 
+	//system(buffer);
 
+        //just set particle coordinate here instead of in Cal_Dist_Coord
+	sprintf(buffer,"%s.gdat",bngl_name); 
+        fopen(buffer, "r");
+        while((c=fgetc(fp)) != '\n') {} //skip header
+	while((c=fgetc(fp)) != '\n') {} //skip first line of data
+        for(k=0; k < coord_ind; k++){
+	  fscanf(fp, "%*e");
+	}
+        fscanf(fp, "%lf",&tmpcoord); //only read the value at coord_ind
+        fclose(fp);
+	par[i][j].coord = tmpcoord;
+        // ffuts tadg
+        
       }
     }
   }

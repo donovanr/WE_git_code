@@ -53,7 +53,9 @@ int main(int argc, char *argv[]) {
 
  
   for(i = 0; i < state_size; i++){
-    free(rx_states[i]);
+    if(rx_states[i] != NULL) {
+      free(rx_states[i]);
+    }
   }
   free(rx_states);
 //  system("rm -r BNGSim/");
