@@ -1,0 +1,10 @@
+bngl_name   YeastPol
+coord_ind   1
+leftb       0
+rightb      100
+nbin        102
+nallpar     4080
+nsnapshot   7
+mmratio     9.0
+startstate  0
+endstate    -1

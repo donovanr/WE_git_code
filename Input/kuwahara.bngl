@@ -23,6 +23,9 @@ begin seed species
     S2  50 
     B2  0
 end seed species
+begin observables
+  Molecules S1 S1()
+end observables
 begin reaction rules
     # E1-S1 reversible binding
     S1 + E1  <->  B1         k1, k2

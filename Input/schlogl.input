@@ -1,0 +1,10 @@
+bngl_name   final5
+coord_ind   1
+leftb       0
+rightb      800
+nbin        802
+nallpar     4010
+nsnapshot   4
+mmratio     9.0
+startstate  245
+endstate    -1

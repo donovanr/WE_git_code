@@ -31,6 +31,9 @@ begin seed species
 	null()	1
 	trash()	1
 end seed species
+begin observables
+  Molecules G_bg G_bg()
+end observables
 begin reaction rules
 	R1:		null()			->	R()				k1
 	R2:		R()				->	trash()			k2
