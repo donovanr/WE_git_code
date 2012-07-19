@@ -7,8 +7,6 @@ int nspecies;
 int coord_ind;
 size_t state_size;
 particle par[MAX_N_BIN][MAX_N_PAR],tmppar[MAX_N_BIN][MAX_N_PAR]; //particle information
-//kuwahara *rx_states; //lots of memory could be used here...
-//kuwahara empt_state;// = {0, 0, 0, 0, 0, 0};
 int **rx_states;
 char **species_names;
 char bngl_name[30]; //Max BNGL file name length is 25

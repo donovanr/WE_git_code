@@ -10,8 +10,8 @@
 # with interval DT between them.
 
 # BioNetGen Path
-#BNG_PATH=../../../BioNetGen-2.2.0-stable
-BNG_PATH=/Users/ajsedgewick/BioNetGen-2.2.0-stable
+BNG_PATH=~/Dropbox/CPCB_Classes/cell_and_systems/cell_and_systems_project/BioNetGen-2.2.0-stable
+  #BNG_PATH=/Users/ajsedgewick/BioNetGen-2.2.0-stable
 
 # base name of the model
 MODEL_NAME=`basename "$1" .bngl`

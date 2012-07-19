@@ -15,21 +15,10 @@ void Put_Ini_Stru() {
   FILE *fp;
   char filename[256],buffer[256],c;
   double tmpcoord, tmpdistA, tmpdistB;
-  //kuwahara in_state;
   int *in_state;
   double flin;
   
   
-  
-  // gdat stuff
-  //chdir("DATA/");
-  //sprintf(buffer,"cat ../BNGSim/initial-gdat | awk 'NR==2 {print $2}' > outputG");
-  //system(buffer);
-  //system("wait");
-	
-  //fp=fopen("outputG","r");
-  //fscanf(fp,"%lf",&tmpcoord);
-  //fclose(fp)
   fp=fopen("BNGSim/initial-gdat","r");
   while((c=fgetc(fp)) != '\n') {} //skip line (header)
   for(k=0; k < coord_ind; k++){
@@ -37,11 +26,6 @@ void Put_Ini_Stru() {
   }
   fscanf(fp, "%lf",&tmpcoord); //only read the value at coord_ind
   fclose(fp);
-  //system("rm outputG");
-  //chdir("../");
-
-  
-  // ffuts tadg
 	
 
   nspecies = 0;
@@ -71,10 +55,6 @@ void Put_Ini_Stru() {
   }
   fclose(fp);
 
-	// gdat stuff
-  ////tmpcoord = (double)(in_state[coord_ind]); // IMPORTANT, this is the species we're going to look at
- 	// ffuts tadg
-
   tmpdistA=fabs(startstate-tmpcoord);
   tmpdistB=fabs(endstate-tmpcoord);
 
@@ -98,17 +78,6 @@ void Put_Ini_Stru() {
     par[i][j].tb0=0;
     assert(par[i][j].numb<=nallpar);
     memcpy(rx_states[par[i][j].numb-1], in_state, nspecies*sizeof(int));
-    
-    // gdat stuff are these files ever used?? everything should already
-    // be stored in the par.coord
-    //sprintf(filename,"gdat-%d",par[i][j].numb);
-    //sprintf(buffer,"cp BNGSim/initial-gdat DATA/%s",filename);
-    //system(buffer);
-   
-    //sprintf(filename,"Trajectory-%d",par[i][j].numb);
-    //sprintf(buffer,"cp BNGSim/initial-gdat DATA/%s",filename);
-    //system(buffer);
-    // ffuts tadg
 
   }
 

@@ -12,7 +12,9 @@
 ##################
 
 # BioNetGen Path
-BNG_PATH=/Users/ajsedgewick/BioNetGen-2.2.0-stable
+BNG_PATH=~/Dropbox/CPCB_Classes/cell_and_systems/cell_and_systems_project/BioNetGen-2.2.0-stable
+  #BNG_PATH=/Users/ajsedgewick/BioNetGen-2.2.0-stable
+
 MODEL_NAME=`basename "$1" .bngl`
 
 #########################
