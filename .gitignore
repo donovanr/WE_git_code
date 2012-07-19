@@ -37,8 +37,15 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
+# temp files #
+##############
+
+*.swo
+*.swp
+
 # WE specific files #
 #####################
 
 *.snapshot
 *snapshot*
+rory-imac:Input
