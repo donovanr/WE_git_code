@@ -1,0 +1,42 @@
+# Kuwahara JPC 2008
+begin parameters
+    k1       1.0
+    k2       1.0
+    k3       0.1
+    k4       1.0
+    k5       1.0
+    k6       0.1
+end parameters
+begin molecule types
+    E1()
+    S1()
+    B1()
+    E2()
+    S2()
+    B2()
+end molecule types
+begin seed species
+    E1()  1
+    S1()  50
+    B1()  0
+    E2()  1
+    S2()  50 
+    B2()  0
+end seed species
+begin observables
+  Molecules S1 S1()
+end observables
+begin reaction rules
+    # E1-S1 reversible binding
+    S1() + E1()  <->  B1()         k1, k2
+    # S1 -> S2, catalyzed by E1
+    B1()        ->  S2() + E1()    k3
+    # E2-S2 reversible binding
+    S2() + E2()  <->  B2()         k4, k5
+    # S2 -> S1, catalyzed by E2
+    B2()        ->  S1() + E2()    k6
+end reaction rules
+
+# actions
+generate_network({overwrite=>1})
+simulate_ssa({t_start=>0,t_end=>1.0,n_steps=>1,print_end=>1})

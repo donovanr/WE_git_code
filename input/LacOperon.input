@@ -1,0 +1,10 @@
+bngl_name   LacOperon
+coord_ind   1
+leftb       0
+rightb      120
+nbin        122
+nallpar     6100
+nsnapshot   10
+mmratio     9.0
+startstate  0
+endstate    120

@@ -1,0 +1,10 @@
+bngl_name   kuwahara
+coord_ind   2
+leftb       0
+rightb      100
+nbin        102
+nallpar     5100
+nsnapshot   10
+mmratio     9.0
+startstate  50
+endstate    101
