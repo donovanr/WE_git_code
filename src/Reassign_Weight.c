@@ -1,7 +1,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <time.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h" 
@@ -12,9 +15,6 @@ void Reassign_Weight() {
   int i,j;
   int is,id;
   double sumprob,maxprob,minprob;
-  double fpos; //fake position
-  char filename[256],sfilename[256],buffer[256];
-
 
   for (i=1;i<(nbin+1);i++) {
     if (tmpnpar[i]!=0) {

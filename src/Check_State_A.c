@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h"

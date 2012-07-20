@@ -1,6 +1,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <time.h>
+#include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h" 
@@ -9,9 +13,6 @@
 
 void Cal_Dist_Coord() {
   int i,j;
-  FILE *fp;
-  char filename[256],buffer[256];
-  double tmpcoord;
 
   for (i=1;i<(nbin+1);i++) {
     for (j=1;j<(npar[i]+1);j++) {

@@ -3,6 +3,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h"
@@ -11,7 +13,7 @@
 
 void BF_Sim() {
   int i,j,k;
-  char filename[256],buffer[256],c;
+  char buffer[256],c;
   FILE* fp;
   int* cur_state;
   double flin,tmpcoord;
@@ -50,15 +52,15 @@ void BF_Sim() {
         fclose(fp);
 	
 
-        //just set particle coordinate here instead of in Cal_Dist_Coord
+        /* just set particle coordinate here instead of in Cal_Dist_Coord */
         sprintf(buffer,"%s.gdat",bngl_name); 
         fopen(buffer, "r");
-        while((c=fgetc(fp)) != '\n') {} //skip header
-        while((c=fgetc(fp)) != '\n') {} //skip first line of data
+        while((c=fgetc(fp)) != '\n') {} /* skip header */
+        while((c=fgetc(fp)) != '\n') {} /* skip first line of data */
         for(k=0; k < coord_ind; k++){
           fscanf(fp, "%*e");
         }
-        fscanf(fp, "%lf",&tmpcoord); //only read the value at coord_ind
+        fscanf(fp, "%lf",&tmpcoord); /* only read the value at coord_ind */
         fclose(fp);
         par[i][j].coord = tmpcoord;        
       }

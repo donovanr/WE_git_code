@@ -1,6 +1,9 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <time.h>
+#include <stdlib.h>
 #include <assert.h>
 
 #include "const.h"
@@ -13,18 +16,18 @@
 void Put_Ini_Stru() {
   int i,j,k;
   FILE *fp;
-  char filename[256],buffer[256],c;
+  char c;
   double tmpcoord, tmpdistA, tmpdistB;
   int *in_state;
   double flin;
   
   
   fp=fopen("BNGSim/initial-gdat","r");
-  while((c=fgetc(fp)) != '\n') {} //skip line (header)
+  while((c=fgetc(fp)) != '\n') {} /* skip line (header) */
   for(k=0; k < coord_ind; k++){
     fscanf(fp, "%*e");
   }
-  fscanf(fp, "%lf",&tmpcoord); //only read the value at coord_ind
+  fscanf(fp, "%lf",&tmpcoord); /* only read the value at coord_ind */
   fclose(fp);
 	
 
@@ -37,8 +40,8 @@ void Put_Ini_Stru() {
   fprintf(stderr, "found %d species!\n", nspecies);
   fclose(fp);
 
-  //Allocate all particles
-  //TODO: find more efficient way to do this
+  /* Allocate all particles */
+  /* TODO: find more efficient way to do this */
   for(k = 0; k < nallpar; k++) {
     rx_states[k]=(int *)malloc(nspecies*sizeof(int));
   }

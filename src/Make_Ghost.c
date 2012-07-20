@@ -3,6 +3,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h" 
@@ -11,7 +13,6 @@
 
 void Make_Ghost(int i) {
   int j;
-  char filename[256],buffer[256];
   double tmpcoord;
 
   if (i==nbin) {

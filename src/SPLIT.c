@@ -1,6 +1,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <time.h>
+#include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h" 
@@ -10,7 +14,6 @@
 void SPLIT(int i) {
   int j;
   size_t new_state_size;
-  char filename[256],sfilename[256],buffer[256];
 
   tmpnpar[i]+=1;
   tmppar[i][1].prob=tmppar[i][1].prob/2,0;
@@ -33,7 +36,7 @@ void SPLIT(int i) {
   }
 
   new_state_size = state_size;
-  //not enough space for tmp particle so make some
+  /* not enough space for tmp particle so make some */
   while(tmppar[i][tmpnpar[i]].numb-1 > new_state_size){
     new_state_size += BLOCK_SIZE;
   }

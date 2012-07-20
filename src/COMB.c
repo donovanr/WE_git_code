@@ -1,7 +1,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <time.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h" 
@@ -9,11 +12,9 @@
 #include "WE_main.h"
 
 void COMB(int i) {
-  int j;
   int is,id;
   double p;
   double ran;
-  char filename[256],sfilename[256],buffer[256];
 
   if ((tmppar[i][tmpnpar[i]].prob+tmppar[i][(tmpnpar[i]-1)].prob)!=0) {
     p=tmppar[i][tmpnpar[i]].prob/(tmppar[i][tmpnpar[i]].prob+tmppar[i][(tmpnpar[i]-1)].prob);
@@ -23,13 +24,13 @@ void COMB(int i) {
   }
   ran=rand()/2147483647.0;
 
-  if (ran<p) { //keep the last one
+  if (ran<p) { /* keep the last one */
     if (tmppar[i][(tmpnpar[i]-1)].numb<=nallpar) {
       Fava[0]+=1;
       Fava[Fava[0]]=tmppar[i][(tmpnpar[i]-1)].numb;
     }
     else {
-      if ((tmppar[i][(tmpnpar[i]-1)].numb-nallpar)!=Fexc[0].i) { //not last one
+      if ((tmppar[i][(tmpnpar[i]-1)].numb-nallpar)!=Fexc[0].i) { /* not last one */
 				is=tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb;
 				id=tmppar[i][(tmpnpar[i]-1)].numb;
 				tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb=tmppar[i][(tmpnpar[i]-1)].numb;
@@ -52,7 +53,7 @@ void COMB(int i) {
     tmppar[i][(tmpnpar[i]-1)].distB=tmppar[i][tmpnpar[i]].distB;
   }
 
-  else { //throw away the last one
+  else { /* throw away the last one */
     if (tmppar[i][tmpnpar[i]].numb<=nallpar) {
       Fava[0]+=1;
       Fava[Fava[0]]=tmppar[i][tmpnpar[i]].numb;

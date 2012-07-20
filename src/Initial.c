@@ -1,8 +1,12 @@
 #include <math.h>
 #include <stdio.h>
+#include <math.h>
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h" 
@@ -10,12 +14,9 @@
 #include "WE_main.h"
 
 void Initial() {
-  int i,j, k;
-  FILE *fp;
-  double tmpcoord;
-  char filename[256],buffer[256];
-  int stime; //for random seed
-  long ltime; //for random seed
+  int i,j;
+  int stime; /* for random seed */
+  long ltime; /* for random seed */
   int np;
 
   system("mkdir successful_trajectories");
@@ -40,14 +41,14 @@ void Initial() {
   Fexc[0].j=0;
 
   wbin=(rightb-leftb)/(nbin-2); 
-  npar[nbin]=nallpar/nbin;  //at first just use the average for npar[nbin]
+  npar[nbin]=nallpar/nbin;  /* at first just use the average for npar[nbin] */
 
   for (i=1;i<(nbin);i++) {
-    pbin[i]=leftb+wbin*(i-1); //the postions of bars using to separate the whole space, start from 1, end at (nbin-1)
+    pbin[i]=leftb+wbin*(i-1); /* the postions of bars using to separate the whole space, start from 1, end at (nbin-1) */
     npar[i]=npar[nbin];
   }
 
-  ltime = time(NULL);  //reset the random seed by using the system time
+  ltime = time(NULL);  /* reset the random seed by using the system time */
   stime = (unsigned) ltime/2;
   srand(stime);
 

@@ -1,6 +1,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <time.h>
+#include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h" 
@@ -8,7 +12,6 @@
 #include "WE_main.h"
 
 void Switch(int i, int j, int k) {
-  int m,n;
   int tmptb0,tmpnumb;
   double tmpcoord,tmpdistA,tmpdistB;
   double tmpprob;

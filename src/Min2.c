@@ -1,6 +1,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <time.h>
+#include <stdlib.h>
+#include <assert.h>
 
 #include "const.h"
 #include "types.h" 
@@ -9,7 +13,7 @@
 
 void Min2(int i) {
   int j,m;
-  //void Switch(int i, int j, int k);
+  /* void Switch(int i, int j, int k); */
 
   m=1;
   for (j=2;j<(tmpnpar[i]);j++) {
