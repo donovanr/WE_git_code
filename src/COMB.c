@@ -31,17 +31,17 @@ void COMB(int i) {
     }
     else {
       if ((tmppar[i][(tmpnpar[i]-1)].numb-nallpar)!=Fexc[0].i) { /* not last one */
-				is=tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb;
-				id=tmppar[i][(tmpnpar[i]-1)].numb;
-				tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb=tmppar[i][(tmpnpar[i]-1)].numb;
+        is=tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb;
+        id=tmppar[i][(tmpnpar[i]-1)].numb;
+        tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb=tmppar[i][(tmpnpar[i]-1)].numb;
         free(rx_states[id-1]);
-				rx_states[id-1]=(int *)malloc(nspecies*sizeof(int));
+        rx_states[id-1]=(int *)malloc(nspecies*sizeof(int));
         memcpy(rx_states[id-1], rx_states[is-1], nspecies*sizeof(int));
         free(rx_states[is-1]);
-				rx_states[is-1]=(int *)malloc(nspecies*sizeof(int));
+        rx_states[is-1]=(int *)malloc(nspecies*sizeof(int));
 
-				Fexc[tmppar[i][(tmpnpar[i]-1)].numb-nallpar].i=Fexc[Fexc[0].i].i;
-				Fexc[tmppar[i][(tmpnpar[i]-1)].numb-nallpar].j=Fexc[Fexc[0].i].j;
+        Fexc[tmppar[i][(tmpnpar[i]-1)].numb-nallpar].i=Fexc[Fexc[0].i].i;
+        Fexc[tmppar[i][(tmpnpar[i]-1)].numb-nallpar].j=Fexc[Fexc[0].i].j;
       }
       Fexc[0].i-=1;
       Fexc[0].j-=1;
@@ -60,17 +60,17 @@ void COMB(int i) {
     }
     else {
       if ((tmppar[i][tmpnpar[i]].numb-nallpar)!=Fexc[0].i) {
-				is=tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb;
-				id=tmppar[i][tmpnpar[i]].numb;
-				tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb=tmppar[i][tmpnpar[i]].numb;
+        is=tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb;
+        id=tmppar[i][tmpnpar[i]].numb;
+        tmppar[Fexc[Fexc[0].i].i][Fexc[Fexc[0].i].j].numb=tmppar[i][tmpnpar[i]].numb;
         free(rx_states[id-1]);
-				rx_states[id-1]= (int *)malloc(nspecies*sizeof(int));
+        rx_states[id-1]= (int *)malloc(nspecies*sizeof(int));
         memcpy(rx_states[id-1],rx_states[is-1],nspecies*sizeof(int));
         free(rx_states[is-1]);
-				rx_states[is-1] = (int *)malloc(nspecies*sizeof(int));
+        rx_states[is-1] = (int *)malloc(nspecies*sizeof(int));
 
-				Fexc[tmppar[i][tmpnpar[i]].numb-nallpar].i=Fexc[Fexc[0].i].i;
-				Fexc[tmppar[i][tmpnpar[i]].numb-nallpar].j=Fexc[Fexc[0].i].j;
+        Fexc[tmppar[i][tmpnpar[i]].numb-nallpar].i=Fexc[Fexc[0].i].i;
+        Fexc[tmppar[i][tmpnpar[i]].numb-nallpar].j=Fexc[Fexc[0].i].j;
       }
       Fexc[0].i-=1;
       Fexc[0].j-=1;

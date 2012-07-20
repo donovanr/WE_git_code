@@ -29,7 +29,7 @@ void Put_Ini_Stru() {
   }
   fscanf(fp, "%lf",&tmpcoord); /* only read the value at coord_ind */
   fclose(fp);
-	
+  
 
   nspecies = 0;
   fp=fopen("BNGSim/initial-species", "r");

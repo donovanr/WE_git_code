@@ -32,25 +32,25 @@ void BF_Sim() {
 
         for(k = 0; k < nspecies; k++){
           fprintf(fp, " %d %s %e\n", k+1, species_names[k], (double)cur_state[k]);
-				}
+        }
         fprintf(fp,"end species\n");
         fclose(fp);
 
         system("cat parameters spec_State reactions groups > my_State");
 
-        sprintf(buffer, "./restart.sh");	
+        sprintf(buffer, "./restart.sh");  
         system(buffer);
         sprintf(buffer, "sed -n '/begin species/,/end species/w newspecies' %s_end.net", bngl_name);
         system(buffer);
 
         fp=fopen("newspecies", "r");
-       	fscanf(fp,"%*s %*s");
+         fscanf(fp,"%*s %*s");
         for(k = 0; k < nspecies; k++){
           fscanf(fp, "%*d %*s %lf",&flin);
           cur_state[k] = (int)flin;
         }
         fclose(fp);
-	
+  
 
         /* just set particle coordinate here instead of in Cal_Dist_Coord */
         sprintf(buffer,"%s.gdat",bngl_name); 

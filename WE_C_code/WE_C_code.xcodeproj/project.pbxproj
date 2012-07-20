@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		6B423FED15A77B1400142DC3 /* Assign.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Assign.c; path = ../src/Assign.c; sourceTree = "<group>"; };
+		6B423FED15A77B1400142DC3 /* Assign.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; name = Assign.c; path = ../src/Assign.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		6B423FEE15A77B1400142DC3 /* BF_Sim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BF_Sim.c; path = ../src/BF_Sim.c; sourceTree = "<group>"; };
 		6B423FEF15A77B1400142DC3 /* Cal_Dist_Coord.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Cal_Dist_Coord.c; path = ../src/Cal_Dist_Coord.c; sourceTree = "<group>"; };
 		6B423FF015A77B1400142DC3 /* Check_State_A.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Check_State_A.c; path = ../src/Check_State_A.c; sourceTree = "<group>"; };
@@ -15,7 +15,7 @@
 		6B423FF215A77B1400142DC3 /* COMB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = COMB.c; path = ../src/COMB.c; sourceTree = "<group>"; };
 		6B423FF315A77B1400142DC3 /* const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = const.h; path = ../src/const.h; sourceTree = "<group>"; };
 		6B423FF415A77B1400142DC3 /* dist-coord.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "dist-coord.c"; path = "../src/dist-coord.c"; sourceTree = "<group>"; };
-		6B423FF515A77B1400142DC3 /* extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extern.h; path = ../src/extern.h; sourceTree = "<group>"; };
+		6B423FF515A77B1400142DC3 /* extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = extern.h; path = ../src/extern.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		6B423FF615A77B1400142DC3 /* Initial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Initial.c; path = ../src/Initial.c; sourceTree = "<group>"; };
 		6B423FF715A77B1400142DC3 /* Make_Ghost.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Make_Ghost.c; path = ../src/Make_Ghost.c; sourceTree = "<group>"; };
 		6B423FF815A77B1400142DC3 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = ../src/makefile; sourceTree = "<group>"; };

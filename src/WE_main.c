@@ -18,14 +18,14 @@ int main(int argc, char *argv[]) {
   fin = fopen(argv[1], "r");
     
   fscanf (fin,"%*s %s",bngl_name);
-  fscanf (fin,"%*s %d",&coord_ind);			/* species index of progress coordinate (starts at 0) */
+  fscanf (fin,"%*s %d",&coord_ind);     /* species index of progress coordinate (starts at 0) */
   fprintf (stderr, "Prog Coord: %d\n", coord_ind);
-  fscanf (fin,"%*s %lf",&leftb);    		/* the position of right boardary of state A */
-  fscanf (fin,"%*s %lf",&rightb);   		/* the position of left boardary of state B */
-  fscanf (fin,"%*s %d",&nbin);    			/* bins */
-  fscanf (fin,"%*s %d",&nallpar);    		/* number of all particles */
-  fscanf (fin,"%*s %d",&nsnapshot); 		/* how many snapshots */
-  fscanf (fin,"%*s %lf",&mmratio); 			/* ratio of maximum and minimum  probability */
+  fscanf (fin,"%*s %lf",&leftb);        /* the position of right boardary of state A */
+  fscanf (fin,"%*s %lf",&rightb);       /* the position of left boardary of state B */
+  fscanf (fin,"%*s %d",&nbin);          /* bins */
+  fscanf (fin,"%*s %d",&nallpar);       /* number of all particles */
+  fscanf (fin,"%*s %d",&nsnapshot);     /* how many snapshots */
+  fscanf (fin,"%*s %lf",&mmratio);      /* ratio of maximum and minimum  probability */
   fscanf (fin,"%*s %lf",&startstate);
   fscanf (fin,"%*s %lf",&endstate);
   state_size = nallpar + BLOCK_SIZE;
