@@ -46,7 +46,7 @@ void Put_Ini_Stru() {
     rx_states[k]=(int *)malloc(nspecies*sizeof(int));
   }
 
-  species_names=(char *)malloc(nspecies*sizeof(char *));
+  species_names=malloc(nspecies*sizeof(char *));
   in_state=(int *)malloc(nspecies*sizeof(int));
   fp=fopen("BNGSim/initial-species", "r");
   fscanf(fp,"%*s %*s");
