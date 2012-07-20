@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
     }
   }
   free(rx_states);
-  system("rm -r BNGSim/");
+  system("rm -r BNGSim/ 2>/dev/null");
   
   return 0;
 }

@@ -19,10 +19,10 @@ void Initial() {
   long ltime; /* for random seed */
   int np;
 
-  system("mkdir successful_trajectories");
+  system("mkdir successful_trajectories 2>/dev/null");
   
-  system("rm -r BNGSim");
-  system("mkdir BNGSim");
+  system("rm -r BNGSim 2>/dev/null");
+  system("mkdir BNGSim 2>/dev/null");
   
   system("cp bng_scripts/*.sh BNGSim/");
   system("chmod +x BNGSim/*.sh");
