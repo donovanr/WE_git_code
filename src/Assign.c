@@ -28,7 +28,7 @@ void Assign() {
 					n+=1;
 					Tb=isnapshot-par[i][j].tb0;
 					
-					sprintf(filename,"DATA/Trajectory-%d-%d",isnapshot,n);
+					sprintf(filename,"successful_trajectories/Trajectory-%d-%d",isnapshot,n);
 					fp=fopen(filename, "w");
 					fprintf(fp, "%e", (double)(rx_states[par[i][j].numb-1][1])); //TODO replace with print state function
 					prob_success += par[i][j].prob;

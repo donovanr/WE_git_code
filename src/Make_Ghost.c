@@ -28,7 +28,6 @@ void Make_Ghost(int i) {
     par[i][j].distB=0;
     free(rx_states[par[i][j].numb-1]);
     rx_states[par[i][j].numb-1]=(int *)malloc(nspecies*sizeof(int));
-
   }
   return;
 }

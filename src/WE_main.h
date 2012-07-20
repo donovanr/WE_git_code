@@ -1,5 +1,3 @@
-
-
 void Initial();
 void Put_Ini_Stru();
 void Assign();

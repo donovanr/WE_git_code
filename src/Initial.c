@@ -18,7 +18,7 @@ void Initial() {
   long ltime; //for random seed
   int np;
 
-  system("mkdir DATA");
+  system("mkdir successful_trajectories");
   
   system("rm -r BNGSim");
   system("mkdir BNGSim");
@@ -27,7 +27,7 @@ void Initial() {
   system("chmod +x BNGSim/*.sh");
     
   chdir("BNGSim/");
-  sprintf(buffer, "cp ../Input/%s.bngl %s.bngl", bngl_name, bngl_name);
+  sprintf(buffer, "cp ../input/%s.bngl %s.bngl", bngl_name, bngl_name);
   system(buffer);
   
   sprintf(buffer, "./initialrun.sh %s.bngl", bngl_name);
