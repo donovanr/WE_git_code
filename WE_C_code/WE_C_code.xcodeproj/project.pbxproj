@@ -74,7 +74,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "~/Dropbox/CPCB_Classes/cell_and_systems/cell_and_systems_project/WE_git_code/src";
+			buildWorkingDirectory = "~/Documents/code/WE_git_code/src";
 			dependencies = (
 			);
 			name = WE_C_code;
