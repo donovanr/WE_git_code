@@ -4,7 +4,7 @@
 T="$(date +%s)"
 
 # Do some work here
-nohup ./WE_main $1 > $2 2> err.log
+nohup ./WE_main $1 2>err.log
 wait
 
 T="$(($(date +%s)-T))"
