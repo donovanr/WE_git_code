@@ -86,6 +86,9 @@
 /* Begin PBXProject section */
 		6B423FE215A77AF300142DC3 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
 			buildConfigurationList = 6B423FE515A77AF300142DC3 /* Build configuration list for PBXProject "WE_C_code" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
