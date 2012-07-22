@@ -9,10 +9,6 @@
 # where xxx.bngl is the BNG model set to run for N_BNG_STEPS steps
 # with interval DT between them.
 
-# BioNetGen Path
-BNG_PATH=~/Dropbox/CPCB_Classes/cell_and_systems/cell_and_systems_project/BioNetGen-2.2.0-stable
-  #BNG_PATH=/Users/ajsedgewick/BioNetGen-2.2.0-stable
-
 # base name of the model
 MODEL_NAME=`basename "$1" .bngl`
 
@@ -26,8 +22,11 @@ T_START=$(grep -Po 't_start=>\K.*?(?=,)' ${MODEL_NAME}.bngl)
 T_END=$(grep -Po 't_end=>\K.*?(?=,)' ${MODEL_NAME}.bngl)
 DT=$(echo "scale=5; ($T_END - $T_START)/$N_BNG_STEPS" | bc)
 
+# load up BNG Path and which run_network binary to use
+. setenv.sh
+
 # expand the variables for the BNG call and save them to a file that restart.sh can steal
-echo "${BNG_PATH}/bin/run_network_i386-darwin -o ${MODEL_NAME} -p ssa -h"' $RANDOM'" -a 1e-8 -r 1e-8 -e -g "'./my_State ./my_State'" ${DT} ${N_BNG_STEPS}" > bngcall.sh
+echo "${BNG_PATH}/bin/${RUN_NETWORK} -o ${MODEL_NAME} -p ssa -h"' $RANDOM'" -a 1e-8 -r 1e-8 -e -g "'./my_State ./my_State'" ${DT} ${N_BNG_STEPS}" > bngcall.sh
 chmod +x bngcall.sh
 
 # expand the variables for the cp call and save to a txt file for restart.sh

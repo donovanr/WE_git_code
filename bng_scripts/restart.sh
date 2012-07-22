@@ -9,11 +9,9 @@
 # where xxx.bngl is the BNG model set to run for N_BNG_STEPS steps
 # with interval DT between them.
 
-
 #####################
 # actually do stuff #
 #####################
-
 
 # call run_network to run the model for N_BNG_STEPS of size DT,
 # restarting from the saved end.net file

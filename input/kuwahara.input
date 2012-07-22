@@ -3,8 +3,8 @@ coord_ind   1
 leftb       0
 rightb      100
 nbin        102
-nallpar     5100
-nsnapshot   10
+nallpar     510
+nsnapshot   20
 mmratio     9.0
 startstate  50
 endstate    101
