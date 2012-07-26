@@ -62,8 +62,18 @@ void BF_Sim() {
         }
         fscanf(fp, "%lf",&tmpcoord); /* only read the value at coord_ind */
         fclose(fp);
-        par[i][j].coord = tmpcoord;        
-      }
+				
+				/* recycle */
+				if(recycling_bit == 1){
+					if (tmpcoord >= endstate) {
+						par[i][j].coord = startstate;
+					}
+				}
+				/* end recycle */
+				else{
+					par[i][j].coord = tmpcoord;        
+				}
+			}
     }
   }
   chdir("..");

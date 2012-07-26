@@ -17,11 +17,12 @@ int main(int argc, char *argv[]) {
 
   fin = fopen(argv[1], "r");
     
-  fscanf (fin,"%*s %s",bngl_name);
+  fscanf (fin,"%*s %s",bngl_name);      /* name of the system - needs to be the same as the name of the bngl file */
+  fscanf (fin,"%*s %d",&recycling_bit); /* whether or not to recycle probability back to state A when it reaches the state B */
   fscanf (fin,"%*s %d",&coord_ind);     /* species index of progress coordinate (starts at 0) */
   fprintf (stderr, "Prog Coord: %d\n", coord_ind);
-  fscanf (fin,"%*s %lf",&leftb);        /* the position of right boardary of state A */
-  fscanf (fin,"%*s %lf",&rightb);       /* the position of left boardary of state B */
+  fscanf (fin,"%*s %lf",&leftb);        /* the position of right boarder of state A */
+  fscanf (fin,"%*s %lf",&rightb);       /* the position of left boarder of state B */
   fscanf (fin,"%*s %d",&nbin);          /* bins */
   fscanf (fin,"%*s %d",&nallpar);       /* number of all particles */
   fscanf (fin,"%*s %d",&nsnapshot);     /* how many snapshots */
