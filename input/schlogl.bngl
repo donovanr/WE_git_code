@@ -12,7 +12,7 @@ begin molecule types
 	I()
 end molecule types
 begin seed species
-	X() 245
+	X() 82
 	I() 1
 end seed species
 begin observables
@@ -26,5 +26,4 @@ end model
 
 #ACTIONS
 generate_network({overwrite=>1});
-simulate_ssa({t_start=>0,t_end=>0.1,n_steps=>1,print_end=>1});
-
+simulate_ssa({t_start=>0,t_end=>1.0,n_steps=>1,print_end=>1});
