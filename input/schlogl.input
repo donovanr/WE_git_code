@@ -1,11 +1,12 @@
 bngl_name   schlogl
 recycling   1
+target      563
 coord_ind   1
 leftb       0
 rightb      800
 nbin        802
 nallpar     4010
-nsnapshot   4
+nsnapshot   1000
 mmratio     9.0
 startstate  82
-endstate    563
+endstate    801

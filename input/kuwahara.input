@@ -1,10 +1,12 @@
 bngl_name   kuwahara
+recycling   1
+target      55
 coord_ind   1
 leftb       0
 rightb      100
 nbin        102
-nallpar     510
-nsnapshot   20
+nallpar     1020
+nsnapshot   50
 mmratio     9.0
 startstate  50
 endstate    101

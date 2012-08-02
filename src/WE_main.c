@@ -19,7 +19,8 @@ int main(int argc, char *argv[]) {
     
   fscanf (fin,"%*s %s",bngl_name);      /* name of the system - needs to be the same as the name of the bngl file */
   fscanf (fin,"%*s %d",&recycling_bit); /* whether or not to recycle probability back to state A when it reaches the state B */
-  fscanf (fin,"%*s %d",&coord_ind);     /* species index of progress coordinate (starts at 0) */
+	fscanf (fin,"%*s %lf",&target_state);	/* the state that, when reached, triggers recycling of probability to the start state */
+	fscanf (fin,"%*s %d",&coord_ind);     /* species index of progress coordinate (starts at 0) */
   fprintf (stderr, "Prog Coord: %d\n", coord_ind);
   fscanf (fin,"%*s %lf",&leftb);        /* the position of right boarder of state A */
   fscanf (fin,"%*s %lf",&rightb);       /* the position of left boarder of state B */
@@ -27,8 +28,8 @@ int main(int argc, char *argv[]) {
   fscanf (fin,"%*s %d",&nallpar);       /* number of all particles */
   fscanf (fin,"%*s %d",&nsnapshot);     /* how many snapshots */
   fscanf (fin,"%*s %lf",&mmratio);      /* ratio of maximum and minimum  probability */
-  fscanf (fin,"%*s %lf",&startstate);
-  fscanf (fin,"%*s %lf",&endstate);
+  fscanf (fin,"%*s %lf",&startstate);		/* needs to match start state in bngl file */
+  fscanf (fin,"%*s %lf",&endstate);			/* state at which probability is remofved from the system = succesful trajectories */
   state_size = nallpar + BLOCK_SIZE;
   prob_success = 0;
   rx_states = malloc(state_size * sizeof(int*));

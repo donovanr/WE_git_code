@@ -1,8 +1,8 @@
 char filename[256],buffer[256]; /* common variables */
 double leftb,rightb,mmratio; /* left and right boarders and maximun, minimum probability ratio */
 double wbin,pbin[MAX_N_BIN]; /* wbin: width of bin, pbin[]: position of the bars to cut the space into bins */
-double startstate,endstate; /* start and end states */
-double prob_success; /* probability that has reached success state and been removed */
+double startstate,endstate,target_state; /* start and end states */
+double prob_success,trans_rate,trans_weight,trans_norm; /* probability that has reached success state and been removed */
 int nbin,nallpar,npar[MAX_N_BIN],tmpnpar[MAX_N_BIN],isnapshot,recycling_bit;
 int nspecies;
 int coord_ind;
