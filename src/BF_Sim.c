@@ -22,11 +22,11 @@ void BF_Sim() {
   sprintf(buffer, ". setparameters.sh %s.bngl", bngl_name);
   system(buffer);
 	
-	trans_weight = 0; /* wqeight that gets recycled THIS SNAPSHOT */
-	
-	/* add up the probability in the bin adjacent to the target state */
-	
-	target_state_int = (int) target_state;
+  trans_weight = 0.0; /* wqeight that gets recycled THIS SNAPSHOT */
+  
+  /* add up the probability in the bin adjacent to the target state */
+  
+  target_state_int = (int) target_state;
 	
   for (i=1;i<(nbin+1);i++) {
     for (j=1;j<(npar[i]+1);j++) {
@@ -70,26 +70,20 @@ void BF_Sim() {
         fscanf(fp, "%lf",&tmpcoord); /* only read the value at coord_ind */
         fclose(fp);
 				
-				/* recycling */
-				if(recycling_bit == 1){
-					if (tmpcoord >= target_state) {
-						par[i][j].coord = startstate;
-						trans_weight = trans_weight +par[i][j].prob; /* record the weight that transitions */
-					}
-					else {
-						par[i][j].coord = tmpcoord;
-					}
-				}
-				/* end recycling */
-				else{
-					par[i][j].coord = tmpcoord;        
-				}
-			}
+	/* recycling */
+	if(recycling_bit == 1 && tmpcoord >= target_state) {
+	    tmpcoord = startstate;
+	    trans_weight = trans_weight + par[i][j].prob; /* record the weight that transitions */
+	}
+	/* end recycling */
+	par[i][j].coord = tmpcoord;        
+
+      }
     }
   }
 
-	/* print transition rate */
-	fprintf(stderr, "flux: %f\n", trans_rate);
+  /* print transition rate */
+  fprintf(stderr, "flux: %e\n", trans_weight);
 
 	
   chdir("..");
