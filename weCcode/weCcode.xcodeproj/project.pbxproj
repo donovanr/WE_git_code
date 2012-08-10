@@ -1,0 +1,200 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		6B9203DC15D563880015DB06 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = ../src/makefile; sourceTree = "<group>"; };
+		6B9203DD15D563880015DB06 /* Assign.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Assign.c; path = ../src/Assign.c; sourceTree = "<group>"; };
+		6B9203DE15D563880015DB06 /* BF_Sim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BF_Sim.c; path = ../src/BF_Sim.c; sourceTree = "<group>"; };
+		6B9203DF15D563880015DB06 /* Cal_Dist_Coord.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Cal_Dist_Coord.c; path = ../src/Cal_Dist_Coord.c; sourceTree = "<group>"; };
+		6B9203E015D563880015DB06 /* Check_State_A.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Check_State_A.c; path = ../src/Check_State_A.c; sourceTree = "<group>"; };
+		6B9203E115D563880015DB06 /* Check_State_B.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Check_State_B.c; path = ../src/Check_State_B.c; sourceTree = "<group>"; };
+		6B9203E215D563880015DB06 /* COMB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = COMB.c; path = ../src/COMB.c; sourceTree = "<group>"; };
+		6B9203E315D563880015DB06 /* const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = const.h; path = ../src/const.h; sourceTree = "<group>"; };
+		6B9203E415D563880015DB06 /* dist-coord.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "dist-coord.c"; path = "../src/dist-coord.c"; sourceTree = "<group>"; };
+		6B9203E515D563880015DB06 /* extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extern.h; path = ../src/extern.h; sourceTree = "<group>"; };
+		6B9203E615D563880015DB06 /* Initial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Initial.c; path = ../src/Initial.c; sourceTree = "<group>"; };
+		6B9203E715D563880015DB06 /* Make_Ghost.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Make_Ghost.c; path = ../src/Make_Ghost.c; sourceTree = "<group>"; };
+		6B9203E815D563880015DB06 /* Max.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Max.c; path = ../src/Max.c; sourceTree = "<group>"; };
+		6B9203E915D563880015DB06 /* Min1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Min1.c; path = ../src/Min1.c; sourceTree = "<group>"; };
+		6B9203EA15D563880015DB06 /* Min2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Min2.c; path = ../src/Min2.c; sourceTree = "<group>"; };
+		6B9203EB15D563880015DB06 /* Print_Info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Print_Info.c; path = ../src/Print_Info.c; sourceTree = "<group>"; };
+		6B9203EC15D563880015DB06 /* Put_Ini_Stru.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Put_Ini_Stru.c; path = ../src/Put_Ini_Stru.c; sourceTree = "<group>"; };
+		6B9203ED15D563880015DB06 /* Reassign_Weight.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Reassign_Weight.c; path = ../src/Reassign_Weight.c; sourceTree = "<group>"; };
+		6B9203EE15D563880015DB06 /* scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scanner.c; path = ../src/scanner.c; sourceTree = "<group>"; };
+		6B9203EF15D563880015DB06 /* scanner2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scanner2.c; path = ../src/scanner2.c; sourceTree = "<group>"; };
+		6B9203F015D563880015DB06 /* SPLIT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SPLIT.c; path = ../src/SPLIT.c; sourceTree = "<group>"; };
+		6B9203F115D563880015DB06 /* Switch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Switch.c; path = ../src/Switch.c; sourceTree = "<group>"; };
+		6B9203F215D563880015DB06 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = ../src/types.h; sourceTree = "<group>"; };
+		6B9203F315D563880015DB06 /* WE_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WE_main.c; path = ../src/WE_main.c; sourceTree = "<group>"; };
+		6B9203F415D563880015DB06 /* WE_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WE_main.h; path = ../src/WE_main.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		6B9203CF15D5635A0015DB06 = {
+			isa = PBXGroup;
+			children = (
+				6B9203F415D563880015DB06 /* WE_main.h */,
+				6B9203F215D563880015DB06 /* types.h */,
+				6B9203E315D563880015DB06 /* const.h */,
+				6B9203E515D563880015DB06 /* extern.h */,
+				6B9203DC15D563880015DB06 /* makefile */,
+				6B9203DD15D563880015DB06 /* Assign.c */,
+				6B9203DE15D563880015DB06 /* BF_Sim.c */,
+				6B9203DF15D563880015DB06 /* Cal_Dist_Coord.c */,
+				6B9203E015D563880015DB06 /* Check_State_A.c */,
+				6B9203E115D563880015DB06 /* Check_State_B.c */,
+				6B9203E215D563880015DB06 /* COMB.c */,
+				6B9203E415D563880015DB06 /* dist-coord.c */,
+				6B9203E615D563880015DB06 /* Initial.c */,
+				6B9203E715D563880015DB06 /* Make_Ghost.c */,
+				6B9203E815D563880015DB06 /* Max.c */,
+				6B9203E915D563880015DB06 /* Min1.c */,
+				6B9203EA15D563880015DB06 /* Min2.c */,
+				6B9203EB15D563880015DB06 /* Print_Info.c */,
+				6B9203EC15D563880015DB06 /* Put_Ini_Stru.c */,
+				6B9203ED15D563880015DB06 /* Reassign_Weight.c */,
+				6B9203EE15D563880015DB06 /* scanner.c */,
+				6B9203EF15D563880015DB06 /* scanner2.c */,
+				6B9203F015D563880015DB06 /* SPLIT.c */,
+				6B9203F115D563880015DB06 /* Switch.c */,
+				6B9203F315D563880015DB06 /* WE_main.c */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		6B9203D615D5635A0015DB06 /* weCcode */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 6B9203D915D5635A0015DB06 /* Build configuration list for PBXLegacyTarget "weCcode" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/donovanr/Documents/weSSA/src;
+			dependencies = (
+			);
+			name = weCcode;
+			passBuildSettingsInEnvironment = 1;
+			productName = weCcode;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		6B9203D115D5635A0015DB06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 6B9203D415D5635A0015DB06 /* Build configuration list for PBXProject "weCcode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B9203CF15D5635A0015DB06;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B9203D615D5635A0015DB06 /* weCcode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		6B9203D715D5635A0015DB06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6B9203D815D5635A0015DB06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6B9203DA15D5635A0015DB06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6B9203DB15D5635A0015DB06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B9203D415D5635A0015DB06 /* Build configuration list for PBXProject "weCcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B9203D715D5635A0015DB06 /* Debug */,
+				6B9203D815D5635A0015DB06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B9203D915D5635A0015DB06 /* Build configuration list for PBXLegacyTarget "weCcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B9203DA15D5635A0015DB06 /* Debug */,
+				6B9203DB15D5635A0015DB06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B9203D115D5635A0015DB06 /* Project object */;
+}

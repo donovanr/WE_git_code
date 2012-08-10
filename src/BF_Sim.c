@@ -34,10 +34,15 @@ void BF_Sim() {
           fprintf(fp, " %d %s %e\n", k+1, species_names[k], (double)cur_state[k]);
         }
         fprintf(fp,"end species\n");
-        fclose(fp);
-
-        system("cat parameters spec_State reactions groups > my_State");
-
+        fclose(fp);        
+        
+        /* just use template net file -- insert new species; template already composed so as to lack species block. */
+        
+        /* insert current spec_State species into template net file after molecule types block and save as new .net file*/
+        sprintf(buffer, "sed '/end molecule types/r spec_State' template_no_species.net > %s.net", bngl_name);
+        system(buffer);
+        system("wait");
+                
         sprintf(buffer, "./restart.sh");  
         system(buffer);
         sprintf(buffer, "sed -n '/begin species/,/end species/w newspecies' %s_end.net", bngl_name);

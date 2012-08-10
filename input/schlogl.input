@@ -4,7 +4,7 @@ leftb       0
 rightb      800
 nbin        802
 nallpar     4010
-nsnapshot   4
+nsnapshot   10
 mmratio     9.0
 startstate  82
 endstate    563

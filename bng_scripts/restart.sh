@@ -15,9 +15,6 @@
 
 # call run_network to run the model for N_BNG_STEPS of size DT,
 # restarting from the saved end.net file
+
 ./bngcall.sh > /dev/null
 wait
-
-# copy new end.net file (it gets overwritten by BNG) to old input data file
-./cpmodel.sh
-
