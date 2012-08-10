@@ -1,0 +1,43 @@
+begin parameters
+  a1 156
+  a2 30
+  n 3
+  m 1
+  K1 1
+  K2 1
+  tau 1
+end parameters
+
+begin molecule types
+  G1()
+  G2()
+  null()
+end molecule types
+
+begin seed species
+  G1() 150
+  G2() 30
+  null() 1
+end seed species
+
+begin observables
+  Molecules g1 G1()
+  Molecules g2 G2()
+end observables
+
+begin functions
+  G1prod a1/(1+(g2/K2)^n)
+  G2prod a2/(1+(g1/K1)^m)
+end functions
+
+begin reaction rules
+  G1() + null() -> null() 1/tau
+  G2() + null() -> null() 1/tau
+#  null() -> null() + G1() 2
+#  null() -> null() + G2() 1
+  null() -> null() + G1() G1prod
+  null() -> null() + G2() G2prod
+end reaction rules
+
+generate_network({overwrite=>1});
+simulate_ssa({t_start=>0,t_end=>1.0,n_steps=>1,print_end=>1});
