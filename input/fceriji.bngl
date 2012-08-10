@@ -92,7 +92,7 @@ end reaction rules
 
 begin observables
     Molecules  LynFree    Lyn(U,SH2)
-    Molecules  RecMon	  Rec(a), Rec(a!1).Lig(l!1,l)
+    Molecules  RecMon     Rec(a), Rec(a!1).Lig(l!1,l)
     Molecules  RecDim     Rec.Rec                   
 
     Molecules  RecPbeta   Rec(b~pY!?)
