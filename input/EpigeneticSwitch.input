@@ -1,0 +1,10 @@
+bngl_name   EpigeneticSwitch
+coord_ind   1
+leftb       0
+rightb      300
+nbin        62
+nallpar     620
+nsnapshot   100
+mmratio     9.0
+startstate  0
+endstate    301

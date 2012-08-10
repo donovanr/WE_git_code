@@ -48,4 +48,6 @@ Thumbs.db
 
 *.snapshot
 WE_main
-weSSA/*
+weCcode/*
+successful_trajectories/*
+
