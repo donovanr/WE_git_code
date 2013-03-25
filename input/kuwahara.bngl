@@ -26,9 +26,6 @@ end seed species
 begin observables
   Molecules S1 S1()
 end observables
-begin functions
-  func1 S1/k1
-end functions
 begin reaction rules
     # E1-S1 reversible binding
     S1() + E1()  <->  B1()         k1, k2
