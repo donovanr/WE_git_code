@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -f Succ_Weights.txt N_Succ.txt
+
 # Get time as a UNIX timestamp (seconds elapsed since Jan 1, 1970 0:00 UTC)
 T="$(date +%s)"
 

@@ -29,6 +29,17 @@ void Assign() {
           n+=1;
           Tb=isnapshot-par[i][j].tb0;
           
+          sprintf(filename,"Succ_Weights.txt");
+          fp=fopen(filename, "a");
+          fprintf(fp, "%01.14le\n", (double)(par[i][j].prob)); //TODO replace with print state function
+          fclose(fp);
+          
+          sprintf(filename,"N_Succ.txt");
+          fp=fopen(filename, "a");
+          fprintf(fp, "%i\n", n); //TODO replace with print state function
+          fclose(fp);
+
+          
           sprintf(filename,"successful_trajectories/Trajectory-%d-%d",isnapshot,n);
           fp=fopen(filename, "w");
           fprintf(fp, "%e", (double)(rx_states[par[i][j].numb-1][1])); /* TODO replace with print state function */
