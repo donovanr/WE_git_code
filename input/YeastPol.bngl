@@ -18,7 +18,6 @@ begin molecule types
   G_bg()
   G_d()
   null()
-  trash()
 end molecule types
 begin seed species
   R()     50
@@ -28,15 +27,14 @@ begin seed species
   G_a()   0
   G_bg()  0
   G_d()   0
-  null()  1
-  trash() 1
+  $null()  1
 end seed species
 begin observables
   Molecules G_bg G_bg()
 end observables
 begin reaction rules
   R1: null()         ->  R()             k1
-  R2: R()            ->  trash()         k2
+  R2: R()            ->  null()          k2
   R3: L() + R()      ->  RL() + L()      k3
   R4: RL()           ->  R()             k4
   R5: RL() + G()     ->  G_a() + G_bg()  k5
